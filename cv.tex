@@ -1,12 +1,12 @@
-\documentclass[11pt, a4paper, french, noindent]{article}
+\documentclass[11pt, a4paper, french]{article}
 
 \usepackage{times}
 \usepackage[T1]{fontenc}
-\usepackage{babel}
+\usepackage[french]{babel}
 \usepackage{ulem} %double soulignement
 \usepackage{fancybox}
-\usepackage[dvipdf]{graphicx}
-\usepackage{vmargin}
+\usepackage{graphicx}
+\usepackage[A4]{vmargin}
 
 \begin{document}
 
@@ -15,11 +15,12 @@
 % Marges
 \setlength{\footskip}{5pt}
 \setlength{\oddsidemargin}{1cm}
-\setlength{\textwidth}{450pt}
-\setlength{\marginparwidth}{0pt}
-\setlength{\marginparsep}{0pt}
+%\setlength{\textwidth}{450pt}
+%\setlength{\marginparwidth}{0pt}
+%\setlength{\marginparsep}{0pt}
 %\setmarginsrb{gauche}{haut}{droite}{bas}{ht_tete}{dist_tete_text}{ht_pied}{bas_page_bas_pied}
 \setmarginsrb{2.5cm}{2cm}{0.0cm}{0cm}{0cm}{0cm}{0cm}{0cm}
+
 \unitlength=1cm
 %\layout
 \pagestyle{empty}
@@ -27,7 +28,7 @@
 %\begin{picture}(3,2)(-12,3.5)
   % \centering
 \hspace{12cm}
-{\vspace{1cm}{ \framebox{\includegraphics[height=3cm]{photo.eps}}}}
+       {\vspace{1cm}{ \framebox{\includegraphics[height=3cm]{photo.png}}}}
 %\end{picture}
 \vspace{-5cm} 
 
@@ -37,18 +38,15 @@
 \parbox[l]{9cm}{
 %  \begin{flushleft}
   NOFFICIAL cyrille\\
-  né le 21/05/81 à Lorient\\
+  n\'e le 21/05/81 \`a Lorient\\
   
-  20, rue de la libération\\
-  56620 Pont-Scorff\\
+  10, rue Dombasle\\
+  75015 Paris\\
     
-  Tél: 06 22 95 15 08\\
+  T\'el: 06 22 95 15 08\\
   \textit{E-mail:} \texttt{cyrille\_nofficial@yahoo.fr}
-%\end{flushleft}
 }  
-%
-%
-%
+
 
 %========== Entete ==========
 \vspace{1cm}
@@ -56,7 +54,7 @@
 \Ovalbox{
   \begin{minipage}{12cm}
     \begin{center}
-      \LARGE{Géologue double compétence:\\ informatique et géomatique}
+      \LARGE{Ing\'enieur d'\'etude Java/J2EE}
     \end{center}
   \end{minipage}
 }
@@ -65,7 +63,141 @@
 %
 %
 %
+\setlength{\textwidth}{450pt}
 
+\textbf{
+  \Large{
+    \uuline{Comp\'etences:}
+  }
+}\\
+\begin{description}
+\item[OS:] Linux/UNIX (Debian, Fedora, Suse, Solaris).
+\item[Langages:] Java, Python, Bash
+\item[J2EE:] Tomcat, SJSAS/Glassfish, J2EE4, J2EE5,
+JAX-WS, Spring, Tomcat, Struts, Ant, Log4j, Hibernate, Ibatis
+\item[Base de donn\'ees:] SQL, Pl/Pgsql, PostgreSQL/PostGIS, Mysql
+\item[Outils de d\'eveloppement:] Ant, Eclipse, Netbeans, Git, SVN, CVS, Emacs, Trac
+\item[Packaging:] Ant, Debian (sources et binaires)
+\item[Web:] Apache, HTML, CSS, JSP
+\item[Autre:] xsl, doxygen, graphviz, \LaTeX, ssh
+\end{description}
+
+
+
+\vspace{0.5cm}
+\centerline{
+  \rule{8cm}{0.01cm}
+}
+\vspace{0.5cm}
+
+
+\textbf{
+  \Large{
+    \uuline{Exp\'erience Professionnelle:}
+  }
+}\\
+
+\begin{description}
+\item[Ao\^ut 2008 - :] Bouygues Telecom Fai - D\'eveloppement d'un webservice J2EE
+  \begin{description}
+\item[T\^ache: ] Impl\'ementation d'un webservice permettant la souscription d'abonnement depuis les boutiques du r\'eseau
+\item[-] g\'en\'eration de contrat sous forme de PDF
+  \item[-] Serveur J2EE SJSAS 8.2 et 9.1
+  \item[-] Base de donn\'ees Oracle 9.4
+  \item[-] Netbeans, Ant,
+  \item[-] technologies: JAXB, JAX-WS, JAX-RPC, git, cvs, doxygen, Junit
+  \end{description}
+
+\item[Juin 2008 - Juillet 2008 :] Projet LiveRobot (OrangeLab)\\
+  D\'eveloppement d'une servlet de contr\^ole \`a distance (commande et vid\'eo) 
+  \begin{description}
+  \item[-] Tomcat
+  \item[-] Eclipse, Junit, Ibatis
+
+  \end{description}
+
+%% Webraska %%
+\item[F\'evrier 2008 - Mai 2008:] Webraska, Maisons-Laffitte - D\'eveloppement d'un moteur de pois dynamique permettant l'int\'egration et la mise \`a jour de pois\\
+  \begin{description}
+  \item[T\^ache:]
+    \begin{description}
+      \item[-] D\'eveloppement de la couche stockage bas\'ee sur Mysql
+      \item[-] D\'eveloppement du webservice d\'eploy\'e en frontal bas\'e sur JAX-WS/Apache CXF
+    \end{description}
+  \item[Technologies:] Tomcat, Mysql, JAX-WS (Apache CXF), Eclipse, Junit
+  \end{description}
+
+
+%% Magic %%
+\item[Septembre 2007 - F\'evrier 2008 :] Projet Magic (Ratp)\\
+  Recherche d'itin\'eraires multi-modal (transport en commun/pi\'eton) et multi-provider (Ratp, Webraska)
+  \begin{description}
+  \item[T\^ache:]
+    \begin{description}
+    \item[-] D\'eveloppement d'une API de calculs d'itin\'eraires pi\'eton/ratp s'appuyant sur les web services de diff\'erents fournisseurs (RATP, Webraska, PTV, Yahoo). Cette API int\`egre les fonctionnalit\'es suivantes:
+      \begin{description}
+        \item[.] geocoding et reversegeocoding
+        \item[.] calculs d'itin\'eraires
+        \item[.] r\'ecup\'eration de cartes
+        \item[.] trac\'e d'itin\'eraires et affichage de pois sur des cartes existantes(ind\'ependamment de l'origine des cartes, des itin\'eraires et des pois) 
+      \end{description}
+    \end{description}
+    
+  \item[Technologies:] Java, Postgis/PGrouting, ImageMagick, JTS(Java Topology Suite), PostgreSQL/Postgis, Junit
+  \end{description}
+  
+%% SNCF - GEM %%
+\item[Mars 2007 - F\'evrier 2008 :] SNCF - Gares en Mouvement\\
+  TMA du site web www.gares-en-mouvement.com
+  \begin{description}
+  \item[T\^ache:] Maintenance de la couche pr\'esentation (Front-Office) bas\'e sur un gestionnaire de contenu Java (OpenCMS)
+    
+  \item[Technologies:] OpenCms, Spring, Tomcat, Apache, Eclipse, CVS, Ant, HTML, JS, JSP, Taglib, CSS, Log4j, PostgreSQL
+    
+    
+  \end{description}
+
+%% Sytadin %%
+\item[D\'ecembre 2005 - Septembre 2007 :] SISER - Sytadin\\
+  R\'ealisation du site internet d'information routi\`ere ``www.sytadin.fr''
+  \begin{description}
+  \item[T\^ache:]
+    \begin{description}
+    \item[-] D\'eveloppement de la couche pr\'esentation (Front et Back-Office) reposant sur un gestionnaire de contenu Java (OpenCMS)
+    \item[-]Installation et configuration de la plateforme Linux (Debian)
+    \item[-]Tests
+    \item[-] D\'eploiement
+    \end{description}
+
+  \item[Technologies]  OpenCms, Spring, Tomcat, Apache, Eclipse, CVS, Ant, HTML, JavaScript, JSP, Taglib, CSS, Log4j, PostgreSQL, Junit, Debian
+  \end{description}
+
+%% Stage %%
+\item[Juin 2005 - D\'ecembre 2005] France Telecom Recherche \& D\'eveloppement (Stage Master 2)\\
+ Algorithmique d'un calculateur d'itin\'eraires  appliqu\'e au guidage p\'edestre
+ \begin{description}
+ \item[T\^ache:]
+   \begin{description}
+   \item[-] Conception et impl\'ementation d'une base de donn\'ees g\'eographiques utilisant PostgreSQL et sa composante g\'eograhique PostGIS
+   \item[-] Fusion de deux bases de donn\'ees (Teleatlas, IGN)
+   \item[-] Reconstruction de la topologie du graphe routier issue des donn\'ees sources 
+   \item[-] G\'en\'eration de donn\'ees manquantes \`a partir des donn\'ees de la base (g\'eome\'etrie des rues...)
+   \item[-] Algorithme et impl\'ementation du calculateur d'itin\'eraires en Java
+   \item[-] G\'en\'eration des instructions textuels n\'ecessaire au guidage
+   \item[-] G\'en\'eration des cartes sous forme vectorielle (SVG) et raster (png, jpg)
+   \end{description}
+ \item[Technologies:] Java, C, SVG, PostgreSQL/PostGIS, Linux (Debian), Batik, shapefile
+ \end{description}
+\end{description}
+
+
+\centerline{
+  \rule{8cm}{0.01cm}
+}
+\vspace{0.5cm}
+%
+%
+%
 \textbf{
   \Large{
     \uuline{Dipl\^omes:}
@@ -73,34 +205,19 @@
 }\\
 \newcounter{vi} \setcounter{vi}{6} %Ecriture en chiffres romains
 \begin{description}
-  \item[2004-2005:] Master Paris \Roman{vi} filière Science de l'Information Géographique, anciennement DESS double compétence Informatique Appliquée aux Sciences de laTerre
-  \item[2003-2004:] DEA Géosciences Marines, spécialité Géologie Structurale et Sédimentaire (Brest)
+  \item[2004-2005:] Master Paris \Roman{vi} fili\`ere Science de l'Information G\'eographique, anciennement DESS double comp\'etence Informatique Appliqu\'ee aux Sciences de laTerre
+  \item[2003-2004:] DEA G\'eosciences Marines, sp\'ecialit\'e G\'eologie Structurale et S\'edimentaire (Brest)
   \item[2002-2003:] Maitr\^ise Sciences de la Terre et de l'Univers (Brest)
   \item[2001-2002:] Licence Sciences de la Terre et de l'Univers (Brest)
 \end{description}
 
-%\vspace{0.5cm}
+\vspace{0.5cm}
 \centerline{
   \rule{8cm}{0.01cm}
 }
 \vspace{0.5cm}
 %
 %
-
-\textbf{
-  \Large{
-    \uuline{Travaux divers:}
-  }
-}\\
-
-\noindent
-Employé de marée durant les vacances scolaires
-
-%\vspace{0.5cm}
-\centerline{
-  \rule{8cm}{0.01cm}
-}
-\vspace{0.5cm}
 
 \textbf{
   \Large{
@@ -109,7 +226,7 @@ Employé de marée durant les vacances scolaires
 }\\
 
 \begin{description}
-  \item[\textbf{Anglais:}] lu(B), parlé(P), écrit(P)
+  \item[\textbf{Anglais:}] lu(B), parl\'e(P), \'ecrit(P)
   \item[\textbf{Espagnol:}] scolaire
 \end{description} 
 
@@ -121,7 +238,7 @@ Employé de marée durant les vacances scolaires
 
 \textbf{
   \Large{
-    \uuline{Activités:}
+    \uuline{Activit\'es:}
   }
 }\\
 
@@ -140,129 +257,7 @@ VTT
 }\\
 
 \noindent
-Permis de conduire catégorie B
+Permis de conduire cat\'egorie B
 
 
-\newpage
-%%%%%%%%%% Annexes %%%%%%%%%%
-
-\newpage
-\begin{center}
-  \begin{center}
-    \Huge{Annexes}
-  \end{center}
-\end{center}
-
-\vspace{0.5cm}
-
-\textbf{\Large{\uuline{Compétences informatiques:}}}\\
-
-\vspace{0.25cm}
-\noindent
-\textbf{Concepts et méthodes:}
-\begin{description}
-      \item[-] Algorithmique
-      \item[-] Structuration Orientée Objet (HBDS, UML) et non Orientée Objet (SADT)
-      \item[-] Etude détaillée d'une plateforme intégrée Orientée Objet comprenant
-        \begin{description}
-          \item[.] Compilateur d'un langage de programmation à TAD persistants
-          \item[.] Optimiseur, décompilateur, exécuteur
-          \item[.] Compilateur de compilateurs
-          \item[.] Système de fichiers séquentiel indexé à nombre quelconque de niveaux
-          \item[.] SGBD à TAD persistants
-          \item[.] Système expert avec moteur d'inférence dont la vitesse est indépendante du nombre de faits et règles
-          \item[.] IHM 3D stéréoscopique avec animation
-        \end{description}
-        et son application à la réalisation d'un SIG 4D incluant:
-        \begin{description}
-        \item[.] MNT avec placage de l'orthophoto
-        \item[.] mise en place de réseaux terrestres(routes, ...), souterrains(eau, ...) et aériens(lignes électriques,...)
-        \item[.] placage du cadastre, du b\^ati et des toits
-        \item[.] immersion en véhicule terrestre ou en vol tactique
-        \end{description}
-\end{description}
-      
-\vspace{0.4cm}
-\noindent
-\textbf{Système et langages de programmation:}
-\begin{description}
-  \item[-] Windows, GNU/Linux, SUN Solaris
-  \item[-] C/C++, JAVA, FORTRAN 95
-  \item[-] OpenGL, JAVA3D, SVG
-  \item[-] gtkmm, autotools (base), Ethernet, TCP/IP (notion)
-\end{description}
-
-\vspace{0.4cm}
-\noindent
-\textbf{Bases de données:}
-\begin{description}
-\item[-] PostgreSQL, PostGIS, MS Access, JDBC
-\end{description}
-
-\vspace{0.4cm}
-\noindent
-\textbf{Bureautique:}
-\begin{description}
-\item[-] Suite Office, \LaTeX...
-\end{description}
-\newpage
-\vspace{0.4cm}
-\noindent
-\textbf{Stage:}
-\begin{description}
-\item[-] France Telecom Recherche \& Développement: Algorithmique d'un calculateur d'itinéraires  appliqué au guidage pédestre:\\
-\begin{description}
-\item[.] Conception et implémentation d'une base de données géographiques utilisant PostgreSQL et sa composante géograhique PostGIS
-\item[.] Fusion de deux bases de données (Teleatlas, IGN)
-\item[.] Reconstruction de la topologie du graphe routier issue des données sources 
-\item[.] Génération de données manquantes à partir des données de la base (géomeétrie des rues...)
-\item[.] Algorithme et implémentation du calculateur d'itinéraires en Java
-\item[.] Génération des instructions textuels nécessaire au guidage
-\item[.] Génération des cartes sous forme vectorielle (SVG) et raster (png, jpg)
-\end{description}
-\end{description}
-
-\vspace{0.4cm}
-\noindent
-\textbf{Projets:}
-\begin{description}
-\item[-] Géomatique: Articulation de polyèdres se déplacant sur un graphe (FTN95 + OpenGL)
-\item[-] Structuration Orientée Objet: Collecte et stockage des déchets
-\item[-] Bibliographique: La couverture radar/satellites
-\item[-] Génie logiciel: Traitement des instructions exécutables d'un compilateur (Visual C++)
-\item[-] Projet final SIG: coordination des équipes (JAVA + JAVA3D) 
-\end{description}
-
-\newpage
-\textbf{\Large{\uuline{Compétences géologiques:}}}\\
-
-\vspace{0.5cm}
-\noindent
-\textbf{Stages de recherche:}
-\\
-\begin{description}
-  \item[-] \textbf{DEA:} Le volcanisme des dorsales lentes : étude bathymétrique.
-  \item[-] \textbf{Maitrise:} Etude pétrologique et géochimique de la bordure nord-est du bassin de Plourivo: mise en place, relations avec l'environnement sédimentaire, structural et hydrothermal.
-\end{description}
-
-\vspace{1.5cm}
-\noindent
-{\large{\textbf{Stages de terrain:}}}
-\\
-\begin{description}
-\item[-] \textbf{DEA:} Géophysique: Stage de sismique marine à bord du ``C\^ote de la Manche'' entre l'\^ile de Houat et la Baie de Concarneau (1 semaine)
-
-  \item[-] \textbf{Maitrise:}
-    \begin{description}
-    \item[.] Géophysique: Sismique marine à bord du ``C\^ote de la Manche'', \^ile de Sein (3 jours)
-    \item[.] Stage métamorphique: Léon, Finistère (1 semaine)
-    \end{description}
-
-  \item[-] \textbf{Licence:}
-    \begin{description}
-    \item[.] Stage métamorphique: Ile d'Ouessant, Finistère (1 semaine)
-    \item[.] Stage sédimentaire et structural : Vesc, Dr\^ome (1 semaine)
-    \item[.] Stage magmatique : Thiesac, Cantal (1 semaine)
-    \end{description}  
-  \end{description}
 \end{document}

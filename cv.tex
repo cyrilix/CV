@@ -1,38 +1,53 @@
-\documentclass[11pt, a4paper, french]{article}
+\documentclass[11pt, oneside, a4paper, french]{article}
 
 \usepackage{times}
 \usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
 \usepackage[french]{babel}
 \usepackage{ulem} %double soulignement
 \usepackage{fancybox}
 \usepackage{graphicx}
 \usepackage[A4]{vmargin}
+%\usepackage[francais]{layout}
+\usepackage[pdftex,colorlinks=true,
+  pdftitle={CV Cyrille NOFFICIAL},
+  pdfsubject={Ingénieur d’étude Java/J2EE},
+  pdfauthor={Cyrille Nofficial},
+  pdfkeywords={JAVA J2EE spring hibernate},
+  pdfstartview=FitV,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue]{hyperref}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+
+% Marges
+\setlength{\headsep}{0pt}
+\setlength{\footskip}{5pt}
+\setlength{\oddsidemargin}{2cm}
+\setlength{\textwidth}{500pt}
+\setlength{\marginparwidth}{0pt}
+\setlength{\marginparsep}{0pt}
+
+%\setmarginsrb{gauche}{haut}{droite}{bas}{ht_tete}{dist_tete_text}{ht_pied}{bas_page_bas_pied}
+\setmarginsrb{2.0cm}{2cm}{1.5cm}{2cm}{0cm}{0cm}{1cm}{1cm}
+
+
+%Entêtes et pied de page
+\renewcommand{\headrulewidth}{0pt}% suppression du trait 
+\cfoot{}
+\rfoot{\thepage{}/\pageref{LastPage}}
+
 
 \begin{document}
+\pagestyle{fancy}
 
 
-\noindent
-% Marges
-\setlength{\footskip}{5pt}
-\setlength{\oddsidemargin}{1cm}
-%\setlength{\textwidth}{450pt}
-%\setlength{\marginparwidth}{0pt}
-%\setlength{\marginparsep}{0pt}
-%\setmarginsrb{gauche}{haut}{droite}{bas}{ht_tete}{dist_tete_text}{ht_pied}{bas_page_bas_pied}
-\setmarginsrb{2.5cm}{2cm}{0.0cm}{0cm}{0cm}{0cm}{0cm}{0cm}
-
-\unitlength=1cm
-%\layout
-\pagestyle{empty}
 % PHOTO
-%\begin{picture}(3,2)(-12,3.5)
-  % \centering
-\hspace{12cm}
-       {\vspace{1cm}{ \framebox{\includegraphics[height=3cm]{photo.png}}}}
-%\end{picture}
+\hspace{12cm}{\vspace{2cm}{ \framebox{\includegraphics[height=3cm]{photo.jpg}}}}
+      
 \vspace{-5cm} 
-
-
 
 %========== Adresse ==========
 \parbox[l]{9cm}{
@@ -42,9 +57,8 @@
   
   10, rue Dombasle\\
   75015 Paris\\
-    
-  T\'el: 06 22 95 15 08\\
-  \textit{E-mail:} \texttt{cyrille\_nofficial@yahoo.fr}
+  %%T\'el: 06 22 95 15 08\\
+  %%\textit{E-mail:} \texttt{cyrille\_nofficial@yahoo.fr}
 }  
 
 
@@ -60,10 +74,6 @@
 }
 \end{center}
 \vspace{1cm}
-%
-%
-%
-\setlength{\textwidth}{450pt}
 
 \textbf{
   \Large{
@@ -74,21 +84,21 @@
 \item[OS:] Linux/UNIX (Debian, Fedora, Suse, Solaris).
 \item[Langages:] Java, Python, Bash
 \item[J2EE:] Tomcat, SJSAS/Glassfish, J2EE4, J2EE5,
-JAX-WS, Spring, Tomcat, Struts, Ant, Log4j, Hibernate, Ibatis
-\item[Base de donn\'ees:] SQL, Pl/Pgsql, PostgreSQL/PostGIS, Mysql
-\item[Outils de d\'eveloppement:] Ant, Eclipse, Netbeans, Git, SVN, CVS, Emacs, Trac
-\item[Packaging:] Ant, Debian (sources et binaires)
+JAX-WS, Spring, Struts, Ant, Log4j, Hibernate, Ibatis
+\item[Base de donn\'ees:] SQL, Pl/Pgsql, PostgreSQL/PostGIS, Oracle, Mysql
+\item[Outils de d\'eveloppement:] Ant, Eclipse, Netbeans, Git, SVN, CVS, Emacs, Trac, Mantis
+\item[Packaging:] Ant, Debian
 \item[Web:] Apache, HTML, CSS, JSP
-\item[Autre:] xsl, doxygen, graphviz, \LaTeX, ssh
+\item[Autres:] XSLT, doxygen, graphviz, \LaTeX, ssh
 \end{description}
 
 
 
-\vspace{0.5cm}
-\centerline{
-  \rule{8cm}{0.01cm}
-}
-\vspace{0.5cm}
+ \vspace{1cm}
+%% \centerline{
+%%   \rule{8cm}{0.01cm}
+%% }
+%% \vspace{0.5cm}
 
 
 \textbf{
@@ -98,57 +108,51 @@ JAX-WS, Spring, Tomcat, Struts, Ant, Log4j, Hibernate, Ibatis
 }\\
 
 \begin{description}
-\item[Ao\^ut 2008 - :] Bouygues Telecom Fai - D\'eveloppement d'un webservice J2EE
+\setlength{\itemsep}{25pt}
+
+\item[depuis Ao\^ut 2008:] Neotilus (Groupe Degetel)\\
+  Bouygues Telecom Fai - D\'eveloppement d'un webservice J2EE.
   \begin{description}
-\item[T\^ache: ] Impl\'ementation d'un webservice permettant la souscription d'abonnement depuis les boutiques du r\'eseau
-\item[-] g\'en\'eration de contrat sous forme de PDF
-  \item[-] Serveur J2EE SJSAS 8.2 et 9.1
-  \item[-] Base de donn\'ees Oracle 9.4
-  \item[-] Netbeans, Ant,
-  \item[-] technologies: JAXB, JAX-WS, JAX-RPC, git, cvs, doxygen, Junit
+  \item[T\^ache:] Impl\'ementation d'un webservice permettant la souscription d'abonnement depuis les boutiques du r\'eseau Club Bouygues Telecom.
+  \item[Technologies:] Serveur J2EE SJSAS 8.2 et 9.1, Oracle 9.4, Netbeans, Ant,
+ JAXB, JAX-WS, JAX-RPC, git, cvs, doxygen, Junit, XSLT
   \end{description}
 
-\item[Juin 2008 - Juillet 2008 :] Projet LiveRobot (OrangeLab)\\
-  D\'eveloppement d'une servlet de contr\^ole \`a distance (commande et vid\'eo) 
+%% LiveRobot
+\item[Juin 2008 - Juillet 2008 :] Neotilus (Groupe Degetel)\\
+  Projet LiveRobot: d\'eveloppement d'un prototype d'application permettant la prise de contrôle à distance d'un robot jouet. 
   \begin{description}
-  \item[-] Tomcat
-  \item[-] Eclipse, Junit, Ibatis
-
+  \item[T\^ache:] mis en place d'une application serveur chargée de diffuser la vidéo du robot vers les clients connectés et les instructions de déplacement vers le robot.
+  \item[Technologies:] Tomcat, Ibatis, Mysql, Eclipse, Junit 
   \end{description}
 
 %% Webraska %%
-\item[F\'evrier 2008 - Mai 2008:] Webraska, Maisons-Laffitte - D\'eveloppement d'un moteur de pois dynamique permettant l'int\'egration et la mise \`a jour de pois\\
+\item[F\'evrier 2008 - Mai 2008:]  Neotilus (Groupe Degetel)\\
+Webraska, Maisons-Laffitte - D\'eveloppement d'un moteur de pois dynamique permettant l'int\'egration et la mise \`a jour de pois.
   \begin{description}
-  \item[T\^ache:]
-    \begin{description}
-      \item[-] D\'eveloppement de la couche stockage bas\'ee sur Mysql
-      \item[-] D\'eveloppement du webservice d\'eploy\'e en frontal bas\'e sur JAX-WS/Apache CXF
-    \end{description}
+  \item[T\^ache:] D\'eveloppement de la couche stockage reposant sur les fonctionnalités spatiales de Mysql et intégration d'un webservice d\'eploy\'e en frontal.
   \item[Technologies:] Tomcat, Mysql, JAX-WS (Apache CXF), Eclipse, Junit
   \end{description}
 
 
 %% Magic %%
-\item[Septembre 2007 - F\'evrier 2008 :] Projet Magic (Ratp)\\
-  Recherche d'itin\'eraires multi-modal (transport en commun/pi\'eton) et multi-provider (Ratp, Webraska)
+\item[Septembre 2007 - F\'evrier 2008 :]  Neotilus (Groupe Degetel)\\
+  Projet Magic (Ratp): recherche d'itin\'eraires multi-modal (transport en commun/pi\'eton) et multi-provider (Ratp, Webraska).
   \begin{description}
-  \item[T\^ache:]
+  \item[T\^ache:] D\'eveloppement d'une API de calculs d'itin\'eraires pi\'eton s'appuyant sur les web services de diff\'erents fournisseurs (RATP, Webraska, PTV, Yahoo) intégrant les fonctionnalit\'es suivantes:
     \begin{description}
-    \item[-] D\'eveloppement d'une API de calculs d'itin\'eraires pi\'eton/ratp s'appuyant sur les web services de diff\'erents fournisseurs (RATP, Webraska, PTV, Yahoo). Cette API int\`egre les fonctionnalit\'es suivantes:
-      \begin{description}
-        \item[.] geocoding et reversegeocoding
-        \item[.] calculs d'itin\'eraires
-        \item[.] r\'ecup\'eration de cartes
-        \item[.] trac\'e d'itin\'eraires et affichage de pois sur des cartes existantes(ind\'ependamment de l'origine des cartes, des itin\'eraires et des pois) 
-      \end{description}
+    \item[-] geocoding et reversegeocoding
+    \item[-] calculs d'itin\'eraires
+    \item[-] r\'ecup\'eration de cartes
+    \item[-] trac\'e d'itin\'eraires et affichage de pois sur des cartes existantes (ind\'ependamment de l'origine des cartes, des itin\'eraires et des 
     \end{description}
     
-  \item[Technologies:] Java, Postgis/PGrouting, ImageMagick, JTS(Java Topology Suite), PostgreSQL/Postgis, Junit
+  \item[Technologies:] Java, PostgreSQL/Postgis, PGrouting, ImageMagick, JTS (Java Topology Suite), Ant, Junit
   \end{description}
   
 %% SNCF - GEM %%
-\item[Mars 2007 - F\'evrier 2008 :] SNCF - Gares en Mouvement\\
-  TMA du site web www.gares-en-mouvement.com
+\item[Mars 2007 - F\'evrier 2008 :] Neotilus (Groupe Degetel)\\
+  SNCF - Gares en Mouvement: TMA du site web \href{http://www.gares-en-mouvement.com}{www.gares-en-mouvement.com}
   \begin{description}
   \item[T\^ache:] Maintenance de la couche pr\'esentation (Front-Office) bas\'e sur un gestionnaire de contenu Java (OpenCMS)
     
@@ -158,15 +162,13 @@ JAX-WS, Spring, Tomcat, Struts, Ant, Log4j, Hibernate, Ibatis
   \end{description}
 
 %% Sytadin %%
-\item[D\'ecembre 2005 - Septembre 2007 :] SISER - Sytadin\\
-  R\'ealisation du site internet d'information routi\`ere ``www.sytadin.fr''
+\item[D\'ecembre 2005 - Septembre 2007 :] Neotilus (Groupe Degetel)\\
+  SISER - Sytadin: R\'ealisation du site internet d'information routi\`ere \href{http://www.sytadin.fr}{www.sytadin.fr}
   \begin{description}
   \item[T\^ache:]
     \begin{description}
     \item[-] D\'eveloppement de la couche pr\'esentation (Front et Back-Office) reposant sur un gestionnaire de contenu Java (OpenCMS)
-    \item[-]Installation et configuration de la plateforme Linux (Debian)
-    \item[-]Tests
-    \item[-] D\'eploiement
+    \item[-]Installation et configuration du serveur Linux (Debian)
     \end{description}
 
   \item[Technologies]  OpenCms, Spring, Tomcat, Apache, Eclipse, CVS, Ant, HTML, JavaScript, JSP, Taglib, CSS, Log4j, PostgreSQL, Junit, Debian
@@ -174,16 +176,14 @@ JAX-WS, Spring, Tomcat, Struts, Ant, Log4j, Hibernate, Ibatis
 
 %% Stage %%
 \item[Juin 2005 - D\'ecembre 2005] France Telecom Recherche \& D\'eveloppement (Stage Master 2)\\
- Algorithmique d'un calculateur d'itin\'eraires  appliqu\'e au guidage p\'edestre
+ Algorithmique d'un calculateur d'itin\'eraires  appliqu\'e au guidage p\'edestre.
  \begin{description}
- \item[T\^ache:]
+ \item[T\^ache:] D\'eveloppement de la base de donn\'ees et du calculateur:
    \begin{description}
-   \item[-] Conception et impl\'ementation d'une base de donn\'ees g\'eographiques utilisant PostgreSQL et sa composante g\'eograhique PostGIS
    \item[-] Fusion de deux bases de donn\'ees (Teleatlas, IGN)
    \item[-] Reconstruction de la topologie du graphe routier issue des donn\'ees sources 
-   \item[-] G\'en\'eration de donn\'ees manquantes \`a partir des donn\'ees de la base (g\'eome\'etrie des rues...)
    \item[-] Algorithme et impl\'ementation du calculateur d'itin\'eraires en Java
-   \item[-] G\'en\'eration des instructions textuels n\'ecessaire au guidage
+   \item[-] G\'en\'eration des instructions de guidage
    \item[-] G\'en\'eration des cartes sous forme vectorielle (SVG) et raster (png, jpg)
    \end{description}
  \item[Technologies:] Java, C, SVG, PostgreSQL/PostGIS, Linux (Debian), Batik, shapefile
@@ -191,13 +191,7 @@ JAX-WS, Spring, Tomcat, Struts, Ant, Log4j, Hibernate, Ibatis
 \end{description}
 
 
-\centerline{
-  \rule{8cm}{0.01cm}
-}
-\vspace{0.5cm}
-%
-%
-%
+\newpage
 \textbf{
   \Large{
     \uuline{Dipl\^omes:}
@@ -211,11 +205,7 @@ JAX-WS, Spring, Tomcat, Struts, Ant, Log4j, Hibernate, Ibatis
   \item[2001-2002:] Licence Sciences de la Terre et de l'Univers (Brest)
 \end{description}
 
-\vspace{0.5cm}
-\centerline{
-  \rule{8cm}{0.01cm}
-}
-\vspace{0.5cm}
+\vspace{1cm}
 %
 %
 
@@ -226,29 +216,23 @@ JAX-WS, Spring, Tomcat, Struts, Ant, Log4j, Hibernate, Ibatis
 }\\
 
 \begin{description}
-  \item[\textbf{Anglais:}] lu(B), parl\'e(P), \'ecrit(P)
-  \item[\textbf{Espagnol:}] scolaire
+  \item[\textbf{Anglais:}] lu, \'ecrit
 \end{description} 
 
-\vspace{0.5cm}
-\centerline{
-  \rule{8cm}{0.01cm}
-}
-\vspace{0.5cm}
+\vspace{1cm}
 
 \textbf{
   \Large{
     \uuline{Activit\'es:}
   }
-}\\
-
-VTT
-
-\vspace{0.5cm}
-\centerline{
-  \rule{8cm}{0.01cm}
 }
-\vspace{0.5cm}
+
+\begin{description}
+  \item[-] contributeur sur le projet OpenStreetMap.org
+  \item[-] VTT
+\end{description}
+
+\vspace{1cm}
 
 \textbf{
   \Large{

@@ -1,120 +1,94 @@
-\documentclass[11pt, oneside, a4paper, french]{article}
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
-\usepackage{times}
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
 \usepackage[french]{babel}
-\usepackage{ulem} %double soulignement
-\usepackage{fancybox}
-\usepackage{graphicx}
-\usepackage[A4]{vmargin}
+
+%\usepackage{ulem} %double soulignement
+%\usepackage{fancybox}
+%\usepackage{graphicx}
+%\usepackage[A4]{vmargin}
 %\usepackage[francais]{layout}
-\usepackage[pdftex,colorlinks=true,
-  pdftitle={CV Cyrille NOFFICIAL},
-  pdfsubject={Architecte logiciel/Devops},
-  pdfauthor={Cyrille Nofficial},
-  pdfkeywords={JAVA Python Git Gerrit},
-  pdfstartview=FitV,
-  linkcolor=black,
-  citecolor=black,
-  urlcolor=blue]{hyperref}
-\usepackage{lastpage}
+
+%\usepackage[pdftex,colorlinks=true,
+%  pdftitle={CV Cyrille NOFFICIAL},
+%  pdfsubject={Architecte logiciel / Devops},
+%  pdfauthor={Cyrille Nofficial},
+%  pdfkeywords={JAVA Python Git Int\'egration continue},
+%  pdfstartview=FitV,
+%  linkcolor=black,
+%  citecolor=black,
+%  urlcolor=blue]{hyperref}
+
+%\usepackage{lastpage}
 \usepackage{fancyhdr}
-
-% Marges
-\setlength{\headsep}{0pt}
-\setlength{\footskip}{5pt}
-\setlength{\oddsidemargin}{2cm}
-\setlength{\textwidth}{500pt}
-\setlength{\marginparwidth}{0pt}
-\setlength{\marginparsep}{0pt}
-
-%\setmarginsrb{gauche}{haut}{droite}{bas}{ht_tete}{dist_tete_text}{ht_pied}{bas_page_bas_pied}
-\setmarginsrb{2.0cm}{2cm}{1.5cm}{2cm}{0cm}{0cm}{1cm}{1cm}
 
 
 %Entêtes et pied de page
-\renewcommand{\headrulewidth}{0pt}% suppression du trait 
-\cfoot{}
-\rfoot{\thepage{}/\pageref{LastPage}}
+%\renewcommand{\headrulewidth}{0pt}% suppression du trait 
+%\cfoot{}
+%\rfoot{\thepage{}/\pageref{LastPage}}
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\recomputelengths   
+\setlength{\hintscolumnwidth}{6cm} 
+
+
+% personal data
+\firstname{Cyrille}
+\familyname{Nofficial}
+%\name{Cyrille}{Nofficial}
+\title{{Architecte logiciel / Devops}                               % optional, remove / comment the line if not wanted
+\address{31 rue Saint Amand}{75015 Paris}{}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{06 68 63 64 48}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fax]{+3~(456)~789~012}
+\email{cyrille.nofficial@yahoo.fr}                               % optional, remove / comment the line if not wanted
+%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+\social[linkedin]{Cyrille Nofficial}                        % optional, remove / comment the line if not wanted
+%\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
+%\social[github]{jdoe}                              % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{photo.jpg}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
 
 
 \begin{document}
-\pagestyle{fancy}
+\makecvtitle
 
-
-% PHOTO
-\hspace{12cm}{\vspace{2cm}{ \framebox{\includegraphics[height=3cm]{photo.jpg}}}}
-      
-\vspace{-5cm} 
-
-%========== Adresse ==========
-\parbox[l]{9cm}{
-%  \begin{flushleft}
-  NOFFICIAL cyrille\\
-  n\'e le 21/05/1981 \`a Lorient\\
-  
-  31, rue Saint Amand\\
-  75015 Paris\\
-  %%T\'el: 06 68 63 64 48\\
-  %%\textit{E-mail:} \texttt{cyrille\_nofficial@yahoo.fr}
-}  
-
-
-%========== Entete ==========
-\vspace{1cm}
-\begin{center}
-\Ovalbox{
-  \begin{minipage}{12cm}
-    \begin{center}
-      \LARGE{Architecte Logiciel / Devops}
-    \end{center}
-  \end{minipage}
-}
-\end{center}
-\vspace{1cm}
-
-\textbf{
-  \Large{
-    \uuline{Comp\'etences:}
-  }
-}\\
-\begin{description}
-\item[OS:] Linux/UNIX (Debian, Centos, Solaris).
-\item[Langages:] Java, Python, Bash
-\item[Int\'egration continue] Git, Gerrit, Jenkins/Hudson, Sonar, Nexus
-\item[J2EE:] Tomcat, Glassfish, JEE, JAX-WS, JAX-RS, Spring, Logback
-\item[NoSQL:] MongoDB, Redis
-\item[Message Queuing:] AMQP, RabbitMQ
-\item[Base de donn\'ees:] SQL, PostgreSQL/PostGIS, Oracle, Mysql
-\item[Outils de d\'eveloppement:] Maven, Ant, Git, SVN, CVS, Vim, Redmine
-\item[Web:] Nginx, Lighttpd, Apache
-\item[Auto H\'ebergement:] postfix, dovecot, roudcube, owncloud
-\item[Autres:] openssl, VirtualBox, LVM, SoapUI, doxygen, graphviz, \LaTeX, ssh
-\end{description}
+\section{Comp\'etences}
+\cvitem{OS}{Linux/UNIX (Debian, Centos, Solaris)}
+\cvitem{Langages}{Java, Python, Shell}
+\cvitem{Int\'egration continue}{Git, Gerrit, Jenkins/Hudson, Sonar, Nexus}
+\cvitem{J2EE}{Tomcat, Glassfish, JEE, JAX-WS, JAX-RS, Spring, Logback}
+\cvitem{NoSQL}{MongoDB, Redis}
+\cvitem{Base de donn\'ees}{SQL, PostgreSQL/PostGIS, Oracle, Mysql}
+\cvitem{Message Queuing}{AMQP, RabbitMQ}
+\cvitem{Outils de d\'eveloppement}{Maven, Ant, Git, SVN, CVS, Vim, Redmine}
+\cvitem{Web}{Nginx, Lighttpd, Apache}
+\cvitem{Auto H\'ebergement}{postfix, dovecot, roudcube, owncloud}
+\cvitem{Autres}{openssl, VirtualBox, LVM, SoapUI, doxygen, graphviz, \LaTeX, ssh}
 
 
 
- \vspace{1cm}
-%% \centerline{
-%%   \rule{8cm}{0.01cm}
-%% }
-%% \vspace{0.5cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Expériences                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-\textbf{
-  \Large{
-    \uuline{Exp\'erience Professionnelle:}
-  }
-}\\
-
-\begin{description}
-\setlength{\itemsep}{25pt}
-
-%% Architecte logiciel %%
-\item[depuis Novembre 2011:]
-    Achitecte logiciel
+\section{Exp\'erience Professionnelle}
+% Bouygues - Architecte logiciel
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cventry{Novembre 2011 - Aujourd'hui}{Architecte logiciel}{Bouygues Telecom}{}{Architecte logiciel}{Architecte logiciel au Middle Office FAI
     \begin{description}
         \item[T\^ache:]
             \begin{description}
@@ -124,149 +98,108 @@
                 \item Mise en place et administration de l'usine logicielle: jenkins, sonar, ...
                 \item Mise en place et administration d'outils de monitoring temps r\'eel de la production
             \end{description}
+          \item[Technologies] glassfish2-3, python, git, gerrit, jenkins, sonar, maven, JAX-WS, REST, JSF2, Spring, SoapUI, junit, easymock,, selenium, mongodb, redis, oracle, logback
     \end{description}
-
-%% Bougues développeur %%
-\item[Novembre 2009 - Novembre 2011:] Bouygues Telecom\\
-    D\'eveloppement de webservices.
-    \begin{description}
-        \item[T\^ache:] TODO       
-    \end{description}
-
-%% Bouygues prestataire%
-\item[depuis Ao\^ut 2008:] Neotilus (Groupe Degetel)\\
-  Bouygues Telecom Fixe - D\'eveloppement d'un webservice J2EE.
-  \begin{description}
-  \item[T\^ache:] Impl\'ementation d'un webservice permettant la souscription d'abonnement depuis les boutiques du R\'eseau Club Bouygues Telecom.
-  \item[Technologies:] Serveur J2EE SJSAS 9.1/Glassfish v2, Oracle 9.4, Eclipse, Netbeans, Ant, JAXB, JAX-WS, JAX-RPC, git, cvs, doxygen, Junit, XSLT, Jmx
-  \end{description}
-
-%% LiveRobot
-\item[Juin 2008 - Juillet 2008 :] Neotilus (Groupe Degetel)\\
-  Projet LiveRobot: d\'eveloppement d'un prototype d'application permettant la prise de contrôle à distance d'un robot jouet. 
-  \begin{description}
-  \item[T\^ache:] mis en place d'une application serveur charg\'ee de diffuser la vid\'eo du robot vers les clients connect\'es et les instructions de d\'eplacement vers le robot.
-  \item[Technologies:] Tomcat, Ibatis, Mysql, Eclipse, Junit 
-  \end{description}
-
-%% Webraska %%
-\item[F\'evrier 2008 - Mai 2008:]  Neotilus (Groupe Degetel)\\
-Webraska, Maisons-Laffitte - D\'eveloppement d'un moteur de pois dynamique permettant l'int\'egration et la mise \`a jour de pois.
-  \begin{description}
-  \item[T\^ache:] D\'eveloppement de la couche stockage reposant sur les fonctionnalit\'es spatiales de Mysql et int\'egration d'un webservice d\'eploy\'e en frontal.
-  \item[Technologies:] Tomcat, Mysql, JAX-WS (Apache CXF), Eclipse, Junit
-  \end{description}
-
-
-%% Magic %%
-\item[Septembre 2007 - F\'evrier 2008 :]  Neotilus (Groupe Degetel)\\
-  Projet Magic (Ratp): recherche d'itin\'eraires multi-modal (transport en commun/pi\'eton) et multi-provider (Ratp, Webraska).
-  \begin{description}
-  \item[T\^ache:] D\'eveloppement d'une API de calculs d'itin\'eraires pi\'eton s'appuyant sur les web services de diff\'erents fournisseurs (RATP, Webraska, PTV, Yahoo) int\'egrant les fonctionnalit\'es suivantes:
-    \begin{description}
-    \item[-] geocoding et reversegeocoding
-    \item[-] calculs d'itin\'eraires
-    \item[-] r\'ecup\'eration de cartes
-    \item[-] trac\'e d'itin\'eraires et affichage de pois sur des cartes existantes (ind\'ependamment de l'origine des cartes, des itin\'eraires et des 
-    \end{description}
-    
-  \item[Technologies:] Java, PostgreSQL/Postgis, PGrouting, ImageMagick, JTS (Java Topology Suite), Ant, Junit
-  \end{description}
-  
-%% SNCF - GEM %%
-\item[Mars 2007 - F\'evrier 2008 :] Neotilus (Groupe Degetel)\\
-  SNCF - Gares en Mouvement: TMA du site web \href{http://www.gares-en-mouvement.com}{www.gares-en-mouvement.com}
-  \begin{description}
-  \item[T\^ache:] Maintenance de la couche pr\'esentation (Front-Office) bas\'e sur un gestionnaire de contenu Java (OpenCMS)
-    
-  \item[Technologies:] OpenCms, Spring, Tomcat, Apache, Eclipse, CVS, Ant, HTML, JS, JSP, Taglib, CSS, Log4j, PostgreSQL
-    
-    
-  \end{description}
-
-%% Sytadin %%
-\item[D\'ecembre 2005 - Septembre 2007 :] Neotilus (Groupe Degetel)\\
-  SISER - Sytadin: R\'ealisation du site internet d'information routi\`ere \href{http://www.sytadin.fr}{www.sytadin.fr}
-  \begin{description}
-  \item[T\^ache:]
-    \begin{description}
-    \item[-] D\'eveloppement de la couche pr\'esentation (Front et Back-Office) reposant sur un gestionnaire de contenu Java (OpenCMS)
-    \item[-]Installation et configuration du serveur Linux (Debian)
-    \end{description}
-
-  \item[Technologies]  OpenCms, Spring, Tomcat, Apache, Eclipse, CVS, Ant, HTML, JavaScript, JSP, Taglib, CSS, Log4j, PostgreSQL, Junit, Debian
-  \end{description}
-
-%% Stage %%
-\item[Juin 2005 - D\'ecembre 2005] France Telecom Recherche \& D\'eveloppement (Stage Master 2)\\
- Algorithmique d'un calculateur d'itin\'eraires  appliqu\'e au guidage p\'edestre.
- \begin{description}
- \item[T\^ache:] D\'eveloppement de la base de donn\'ees et du calculateur:
-   \begin{description}
-   \item[-] Fusion de deux bases de donn\'ees (Teleatlas, IGN)
-   \item[-] Reconstruction de la topologie du graphe routier issue des donn\'ees sources 
-   \item[-] Algorithme et impl\'ementation du calculateur d'itin\'eraires en Java
-   \item[-] G\'en\'eration des instructions de guidage
-   \item[-] G\'en\'eration des cartes sous forme vectorielle (SVG) et raster (png, jpg)
-   \end{description}
- \item[Technologies:] Java, C, SVG, PostgreSQL/PostGIS, Linux (Debian), Batik, shapefile
- \end{description}
-\end{description}
-
-
-\vspace{1cm}
-
-%%\newpage
-\textbf{
-  \Large{
-    \uuline{Dipl\^omes:}
-  }
-}\\
-\newcounter{vi} \setcounter{vi}{6} %Ecriture en chiffres romains
-\begin{description}
-  \item[2004-2005:] Master Paris \Roman{vi} fili\`ere Science de l'Information G\'eographique, anciennement DESS double comp\'etence Informatique Appliqu\'ee aux Sciences de laTerre
-  \item[2003-2004:] DEA G\'eosciences Marines, sp\'ecialit\'e G\'eologie Structurale et S\'edimentaire (Brest)
-  \item[2002-2003:] Maitr\^ise Sciences de la Terre et de l'Univers (Brest)
-  \item[2001-2002:] Licence Sciences de la Terre et de l'Univers (Brest)
-\end{description}
-
-\vspace{1cm}
-%
-%
-
-\textbf{
-  \Large{
-    \uuline{Langues vivantes:}
-  }
-}\\
-
-\begin{description}
-  \item[\textbf{Anglais:}] lu, \'ecrit
-\end{description} 
-
-\vspace{1cm}
-
-\textbf{
-  \Large{
-    \uuline{Activit\'es:}
-  }
 }
 
-\begin{description}
-    \item[-] auto-h\'ebergement (serveur mail, owncloud, ...)
-    \item[-] contributeur sur le projet OpenStreetMap.org (r\'egion de Lorient)
-\end{description}
+% Bouygues - Développeur
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\cventry{Novembre 2009 - Novembre 2011}{Développeur}{Bouygues Telecom}{}{}{Développeur Webservices J2EE 
+}
 
-\vspace{1cm}
 
-\textbf{
-  \Large{
-    \uuline{Divers:}
-  }
-}\\
+% Neotilus
+%%%%%%%%%%%%%%%%%%%%%%%
+\cventry{Ao\^ut 2008 - Novembre 2009}{D\'eveloppeur}{Neotilus (Groupe Degetel)}{}{}{D\'eveloppement d'un webservice J2EE chez Bouygues Telecom
+      \begin{itemize}
+        \item[T\^ache] Impl\'ementation d'un webservice permettant la souscription d'abonnement depuis les boutiques du R\'eseau Club Bouygues Telecom.
+        \item[Technologies:] Serveur J2EE SJSAS 9.1/Glassfish v2, Oracle 9.4, Eclipse, Netbeans, Ant, JAXB, JAX-WS, JAX-RPC, git, cvs, doxygen, Junit, XSLT, Jmx
+        \end{itemize}
+}
 
-\noindent
-Permis de conduire cat\'egorie B
+%% LiveRobot
+\cventry{Juin 2008 - Juillet 2008}{D\'eveloppeur}{Neotilus (Groupe Degetel)}{}{}{Projet LiveRobot: d\'eveloppement d'un prototype d'application permettant la prise de contrôle à distance d'un robot jouet.
+  \begin{itemize}
+          \item[T\^ache:] mis en place d'une application serveur charg\'ee de diffuser la vid\'eo du robot vers les clients connect\'es et les instructions de d\'eplacement vers le robot.
+          \item[Technologies:] Tomcat, Ibatis, Mysql, Eclipse, Junit 
+  \end{itemize}    
+}
+
+%% Webraska %%
+\cventry{F\'evrier 2008 - Mai 2008}{D\'eveloppeur}{Neotilus (Groupe Degetel)}{}{Webraska, Maisons-Laffitte}{D\'eveloppement d'un moteur de POI dynamique permettant l'int\'egration et la mise \`a jour de pois.
+  \begin{itemize}
+    \item[T\^ache:] D\'eveloppement de la couche stockage reposant sur les fonctionnalit\'es spatiales de Mysql et int\'egration d'un webservice d\'eploy\'e en frontal.
+    \item[Technologies:] Tomcat, Mysql, JAX-WS (Apache CXF), Eclipse, Junit
+  \end{itemize}
+}
+        
+%% Magic %%
+\cventry{Septembre 2007 - F\'evrier 2008}{D\'eveloppeur}{Neotilus (Groupe Degetel)}{}{}{Projet Magic (Ratp): recherche d'itin\'eraires multi-modal (transport en commun/pi\'eton) et multi-provider (Ratp, Webraska).
+  \begin{itemize}
+    \item[T\^ache:] D\'eveloppement d'une API de calculs d'itin\'eraires pi\'eton s'appuyant sur les web services de diff\'erents fournisseurs (RATP, Webraska, PTV, Yahoo) int\'egrant les fonctionnalit\'es suivantes:
+      \begin{itemize}
+        \item[-] geocoding et reversegeocoding
+        \item[-] calculs d'itin\'eraires
+        \item[-] r\'ecup\'eration de cartes
+        \item[-] trac\'e d'itin\'eraires et affichage de POI sur des cartes existantes
+      \end{itemize}
+    \item[Technologies:] Java, PostgreSQL/Postgis, PGrouting, ImageMagick, JTS (Java Topology Suite), Ant, Junit
+  \end{itemize}
+}
+
+%% SNCF - GEM %%
+\cventry{Mars 2007 - F\'evrier 2008}{D\'eveloppeur}{Neotilus}{}{}{SNCF - Gares en Mouvement: TMA du site web \href{http://www.gares-en-mouvement.com}{www.gares-en-mouvement.com}
+  \begin{itemize}     
+    \item[T\^ache:] Maintenance de la couche pr\'esentation (Front-Office) bas\'e sur un gestionnaire de contenu Java (OpenCMS)
+    \item[Technologies:] OpenCms, Spring, Tomcat, Apache, Eclipse, CVS, Ant, HTML, JS, JSP, Taglib, CSS, Log4j, PostgreSQL
+  \end{itemize}
+}
+
+
+%% Sytadin %%
+\cventry{D\'ecembre 2005 - Septembre 2007}{D\'eveloppeur}{Neotilus}{}{}{SISER - Sytadin: R\'ealisation du site internet d'information routi\`ere \href{http://www.sytadin.fr}{www.sytadin.fr}
+  \begin{itemize}          
+    \item[T\^ache:]
+        \begin{itemize}
+            \item[-] D\'eveloppement de la couche pr\'esentation (Front et Back-Office) reposant sur un gestionnaire de contenu Java (OpenCMS)
+            \item[-]Installation et configuration du serveur Linux (Debian)
+        \end{itemize}
+    \item[Technologies]  OpenCms, Spring, Tomcat, Apache, Eclipse, CVS, Ant, HTML, JavaScript, JSP, Taglib, CSS, Log4j, PostgreSQL, Junit, Debian
+  \end{itemize}
+}
+
+
+%% Stage %%
+\cventry{Juin 2005 - D\'ecembre 2005}{Stage}{France Telecom Recherche \& D\'eveloppement}{}{}{Algorithmique d'un calculateur d'itin\'eraires  appliqu\'e au guidage p\'edestre.
+    \begin{itemize}
+      \item[T\^ache:] D\'eveloppement de la base de donn\'ees et du calculateur:
+        \begin{itemize}
+          \item[-] Fusion de deux bases de donn\'ees (Teleatlas, IGN)
+          \item[-] Reconstruction de la topologie du graphe routier issue des donn\'ees sources 
+          \item[-] Algorithme et impl\'ementation du calculateur d'itin\'eraires en Java
+          \item[-] G\'en\'eration des instructions de guidage
+          \item[-] G\'en\'eration des cartes sous forme vectorielle (SVG) et raster (png, jpg)
+        \end{itemize}
+      \item[Technologies:] Java, C, SVG, PostgreSQL/PostGIS, Linux (Debian), Batik, shapefile
+    \end{itemize}
+}
+
+
+\section{Dipl\^omes}
+\newcounter{vi} \setcounter{vi}{6} %Ecriture en chiffres romains
+\cvitem{2004-2005}{Master Paris \Roman{vi} fili\`ere Science de l'Information G\'eographique, anciennement DESS double comp\'etence Informatique Appliqu\'ee aux Sciences de laTerre}
+\cvitem{2003-2004}{DEA G\'eosciences Marines, sp\'ecialit\'e G\'eologie Structurale et S\'edimentaire (Brest)}
+\cvitem{2002-2003}{Maitr\^ise Sciences de la Terre et de l'Univers (Brest)}
+\cvitem{2001-2002}{Licence Sciences de la Terre et de l'Univers (Brest)}
+
+
+\section{Langues vivantes}
+\cvitem{Anglais}{Lu, \'ecrit}
+
+
+\section{Activit\'es}
+    \cvitem{Auto-h\'ebergement}{Serveur mail, owncloud, ...}
+    \cvitem{\href{http://www.openstreetmap.org}{OpenStreetMap}}{Contributeur sur la r\'egion de Lorient}
 
 
 \end{document}

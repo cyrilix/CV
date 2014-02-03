@@ -12,7 +12,7 @@
 \usepackage[utf8]{inputenc}
 
 \usepackage[french]{babel}
-% le conflit est entre 2 packages : "enumitem" et "french" (ou les autres, voir plus haut), 
+% le conflit est entre 2 packages : "enumitem" et "french"
 % qui n'arrivent pas à se mettre d'accord sur les puces utilisées dans les listes (environnement "itemize").
 \frenchbsetup{StandardLists=true}
 
@@ -31,25 +31,33 @@
 
 
 % personal data
-%\firstname{Cyrille}
-%\familyname{Nofficial}
 \name{Cyrille}{Nofficial}
 \title{Architecte logiciel / Devops}                               % optional, remove / comment the line if not wanted
 \address{31 rue Saint Amand}{75015 Paris}{}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{06 68 63 64 48}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+
+\extrainfo{né le 21/05/1981 à Lorient}                 % optional, remove / comment the line if not wanted
 %\phone[fixed]{+2~(345)~678~901}
 %\phone[fax]{+3~(456)~789~012}
+
 \email{cyrille.nofficial@yahoo.fr}                               % optional, remove / comment the line if not wanted
+
 %\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
-\social[linkedin]{cyrille-nofficial}                        % optional, remove / comment the line if not wanted
+%\social[linkedin]{cyrille-nofficial}                        % optional, remove / comment the line if not wanted
 %\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
 \social[github]{cyrilix}                              % optional, remove / comment the line if not wanted
-%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+\collectionadd[linkedin]{socials}{\protect\httplink[cyrille-nofficial]{fr.linkedin.com/pub/cyrille-nofficial/87/aa9/371/}}
+
+
 %\photo[64pt][0.4pt]{photo.jpg}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
 
-\AtBeginDocument{\hypersetup{pdfborder = 0 0 1,linkcolor=color1}}
+\AtBeginDocument{
+    \hypersetup{pdfborder = 0 0 1,linkcolor=color1,colorlinks,urlcolor=color1}
+
+}
 
 \newenvironment{item_cv}{
 \begin{itemize}
@@ -70,7 +78,7 @@
 \cvitem{Message Queuing}{AMQP, RabbitMQ}
 \cvitem{Outils de d\'eveloppement}{Maven, Ant, Git, SVN, CVS, Vim, Redmine}
 \cvitem{Web}{Nginx, Lighttpd, Apache}
-\cvitem{Auto H\'ebergement}{postfix, dovecot, roudcube, owncloud}
+\cvitem{Auto H\'ebergement}{postfix, dovecot, roundcube, owncloud}
 \cvitem{Autres}{openssl, VirtualBox, LVM, SoapUI, doxygen, graphviz, \LaTeX, ssh}
 
 
@@ -82,128 +90,132 @@
 \section{Exp\'erience Professionnelle}
 % Bouygues - Architecte logiciel
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\cventry{Novembre 2011\\à Aujourd'hui}{Architecte logiciel}{Bouygues Telecom}{}{}{Architecte logiciel au Middle Office FAI. Au sein d'une équipe de 30 personnes (20 développeurs), mon rôle consite à faire évoluer les systèmes techniques et mettre en place ou adapter les méthodes de travail.\\
-\tllabelcventry{2012}{0}{Nov 2011}{Architecte logiciel}{Bouygues Telecom}{}{}{Architecte logiciel au Middle Office FAI. Au sein d'une équipe de 30 personnes (20 développeurs), mon rôle consite à faire évoluer les systèmes techniques et mettre en place ou adapter les méthodes de travail.\\
+\cventry{Nov. 2011\\à Aujourd'hui}{Architecte logiciel}{Bouygues Telecom}{}{}{Architecte logiciel au Middle Office FAI. Mon rôle consite à faire évoluer et maintenir à jour les webservices dédiés à l'acquisition et à la vie cliente sur l'offre internet fixe.\\
+%\tllabelcventry{2012}{0}{Nov 2011}{Architecte logiciel}{Bouygues Telecom}{}{}{Architecte logiciel au Middle Office FAI. Au sein d'une équipe de 30 personnes (20 développeurs), mon rôle consite à faire évoluer les systèmes techniques et mettre en place ou adapter les méthodes de travail.\\
 \begin{item_cv}
     \item \emph{T\^ache:}
             \begin{itemize}%
-                \item Veille technologique
-                \item \og Offshorisation \fg de l'usine de développement (externalisation partielle des développements en Russie (Novosibirsk))
-                \item \'Evolution de l'architecture logiciel des syst\'emes techniques.
-                \item D\'eveloppement des outils tranverses (outils de monitoring)
-                \item Harmonisation des développements sur les sytèmes techniques existant
-                \item Mise en place et administration de l'usine logicielle: jenkins, sonar, gerrit \dots
-                \item Intervention sur les problèmes de production
-                \item D\'eveloppement d'outils de monitoring temps r\'eel de la production
+                \item veille technologique
+                \item \og offshorisation \fg de l'usine de développement (externalisation partielle des développements en Russie (Novosibirsk))
+                \item harmonisation des développements sur les sytèmes techniques existants
+                \item mise en place et administration de l'usine logicielle: jenkins, sonar, gerrit \dots
+                \item intervention sur les problèmes de production (fuite mémoire, problèmes de performance, \dots)
+                \item d\'eveloppement d'outils de monitoring temps r\'eel de la production
             \end{itemize}
-    \item \emph{Technologies:} Glassfish 2 et 3, python, git, gerrit, jenkins, sonar, maven, JAX-WS, REST, JSF2, Spring, SoapUI, Junit, Easymock, Selenium, Mongodb, Redis, Oracle, logback
+    \item \emph{Technologies:} AOP, glassfish 2 et 3, python, git, gerrit, Jenkins, Sonar, Maven, JAX-WS, REST, JSF2, Spring, Soapui, Junit, Easymock, Selenium, Mongodb, Redis, Oracle, Logback
 \end{item_cv}
 }
 
 \vspace{5mm}
 
 
-% Bouygues - Développeur
+% bouygues - développeur
 %%%%%%%%%%%%%%%%%%%%%%%%%
-%\cventry{Ao\^ut 2008\\à Novembre 2011}{Développeur}{Bouygues Telecom}{}{}{Développeur de Webservices J2EE au sein du Middle Office FAI.
-\tllabelcventry{2008}{2012}{Ao\^ut -- Nov. 2001}{Développeur}{Bouygues Telecom}{}{}{Développeur de Webservices J2EE au sein du Middle Office FAI.\\
+\cventry{ao\^ut 2008\\à nov. 2011}{Développeur}{Bouygues Telecom}{}{}{Développeur de webservices j2ee au sein du Middle Office FAI.
+%\tllabelcventry{2008}{2012}{ao\^ut -- nov. 2001}{développeur}{bouygues telecom}{}{}{développeur de webservices j2ee au sein du middle office fai.\\
     \begin{item_cv}
-        \item \emph{T\^ache:} Impl\'ementation d'un webservice permettant la souscription d'abonnement depuis les boutiques du R\'eseau Club Bouygues Telecom.
-        \item \emph{Technologies:} Serveur J2EE SJSAS 9.1/Glassfish v2, Oracle 9.4, Eclipse, Netbeans, Ant, JAXB, JAX-WS, JAX-RPC, git, subversion, cvs, doxygen, Junit, XSLT, Jmx
+        \item \emph{T\^ache:} impl\'ementation de webservices permettant la souscription d'abonnements fixes depuis les boutiques du R\'eseau Club Bouygues Telecom.
+        \item \emph{Technologies:} serveur j2ee sjsas 9.1/glassfish v2, oracle 9.4/10.2, Ant, JAXB, JAX-WS, JAX-RPC, git, Subversion, cvs, doxygen, Junit, xslt, jmx
     \end{item_cv}
 }
 
 \vspace{5mm}
 
-% Neotilus
+% neotilus
 %%%%%%%%%%%%%%%%%%%%%%%
-%% LiveRobot
-\tldatelabelcventry{2008}{Juin 2008 -- Juil. 2008}{D\'eveloppeur}{Neotilus (Groupe Degetel)}{}{}{Projet LiveRobot: d\'eveloppement d'un prototype d'application permettant la prise de contrôle à distance d'un robot jouet.\\
+%% liverobot
+\cventry{juin 2008\\à juil. 2008}{D\'eveloppeur}{Neotilus}{}{}{Projet liverobot: d\'eveloppement d'un prototype d'application permettant la prise de contrôle à distance d'un robot jouet.
+%\tldatelabelcventry{2008}{juin 2008 -- juil. 2008}{d\'eveloppeur}{neotilus (groupe degetel)}{}{}{projet liverobot: d\'eveloppement d'un prototype d'application permettant la prise de contrôle à distance d'un robot jouet.\\
   \begin{item_cv}
       \item \emph{T\^ache:} mis en place d'une application serveur charg\'ee de diffuser la vid\'eo du robot vers les clients connect\'es et les instructions de d\'eplacement vers le robot.
-      \item \emph{Technologies:} Tomcat, Ibatis, Mysql, Eclipse, Junit 
+      \item \emph{Technologies:} tomcat, ibatis, mysql, eclipse, junit 
   \end{item_cv}    
 }
 
 \vspace{5mm}
 
-%% Webraska %%
-\tllabelcventry{2007}{2008}{F\'evr. 2008 -- Mai 2008}{D\'eveloppeur}{Neotilus (Groupe Degetel)}{}{Webraska, Maisons-Laffitte}{D\'eveloppement d'un moteur de POI dynamique permettant l'int\'egration et la mise \`a jour de pois.\\
+%% webraska %%
+\cventry{f\'evr. 2008\\à mai 2008}{D\'eveloppeur}{Neotilus}{}{Webraska, Maisons-Laffitte}{d\'eveloppement d'un moteur de POI (Point Of Interest) dynamique permettant l'int\'egration et la mise \`a jour de POI.
+%\tllabelcventry{2007}{2008}{f\'evr. 2008 -- mai 2008}{d\'eveloppeur}{neotilus (groupe degetel)}{}{webraska, maisons-laffitte}{d\'eveloppement d'un moteur de poi dynamique permettant l'int\'egration et la mise \`a jour de pois.\\
   \begin{item_cv}
-      \item \emph{T\^ache:} D\'eveloppement de la couche stockage reposant sur les fonctionnalit\'es spatiales de Mysql et int\'egration d'un webservice d\'eploy\'e en frontal.
-      \item \emph{Technologies:} Tomcat, Mysql, JAX-WS (Apache CXF), Eclipse, Junit
+      \item \emph{T\^ache:} d\'eveloppement de la couche stockage reposant sur les fonctionnalit\'es spatiales de mysql et int\'egration d'un webservice d\'eploy\'e en frontal.
+      \item \emph{Technologies:} Tomcat, Mysql, JAX-WS (Apache CXF), Junit
   \end{item_cv}
 }
      
 \vspace{5mm}
 
-%% Magic %%
-\tllabelcventry{2007}{2008}{Sept. 2007 -- F\'evr. 2008}{D\'eveloppeur}{Neotilus (Groupe Degetel)}{}{}{Projet Magic (Ratp): recherche d'itin\'eraires multi-modal (transport en commun/pi\'eton) et multi-provider (Ratp, Webraska).\\
+%% magic %%
+\cventry{sept. 2007\\à f\'evr. 2008}{D\'eveloppeur}{Neotilus}{}{}{Projet magic (RATP): recherche d'itin\'eraires multi-modal (transport en commun/pi\'eton) et multi-provider (ratp, webraska).
+%\tllabelcventry{2007}{2008}{sept. 2007 -- f\'evr. 2008}{d\'eveloppeur}{neotilus (groupe degetel)}{}{}{projet magic (ratp): recherche d'itin\'eraires multi-modal (transport en commun/pi\'eton) et multi-provider (ratp, webraska).\\
   \begin{item_cv}
-      \item \emph{T\^ache:} D\'eveloppement d'une API de calculs d'itin\'eraires pi\'eton s'appuyant sur les web services de diff\'erents fournisseurs (RATP, Webraska, PTV, Yahoo) int\'egrant les fonctionnalit\'es suivantes:
+      \item \emph{T\^ache:} d\'eveloppement d'une api de calculs d'itin\'eraires pi\'eton s'appuyant sur les web services de diff\'erents fournisseurs (RATP, Webraska, PTV, Yahoo) int\'egrant les fonctionnalit\'es suivantes:
       \begin{itemize}
         \item geocoding et reversegeocoding
         \item calculs d'itin\'eraires
         \item r\'ecup\'eration de cartes
-        \item trac\'e d'itin\'eraires et affichage de POI sur des cartes existantes
+        \item trac\'e d'itin\'eraires et affichage de poi sur des cartes existantes
       \end{itemize}
-  \item \emph{Technologies:} Java, PostgreSQL/Postgis, PGrouting, ImageMagick, JTS (Java Topology Suite), Ant, Junit
+  \item \emph{Technologies:} java, postgresql/postgis, pgrouting, imagemagick, jts (java topology suite), ant, junit
   \end{item_cv}
 }
 
 \vspace{5mm}
 
-%% SNCF - GEM %%
-\tllabelcventry{2007}{2008}{Mars 2007 -- F\'evr. 2008}{D\'eveloppeur}{Neotilus}{}{}{SNCF - Gares en Mouvement: TMA du site web \href{http://www.gares-en-mouvement.com}{www.gares-en-mouvement.com}.\\
+%% sncf - gem %%
+\cventry{mars 2007\\à f\'evr. 2008}{D\'eveloppeur}{Neotilus}{}{}{SNCF - Gares en mouvement: TMA du site web \href{http://www.gares-en-mouvement.com}{www.gares-en-mouvement.com}.
+%\tllabelcventry{2007}{2008}{mars 2007 -- f\'evr. 2008}{d\'eveloppeur}{neotilus}{}{}{sncf - gares en mouvement: tma du site web \href{http://www.gares-en-mouvement.com}{www.gares-en-mouvement.com}.\\
   \begin{item_cv}     
-      \item \emph{T\^ache:} Maintenance de la couche pr\'esentation (Front-Office) bas\'e sur un gestionnaire de contenu Java (OpenCMS)
-      \item \emph{Technologies:} OpenCms, Spring, Tomcat, Apache, Eclipse, CVS, Ant, HTML, JS, JSP, Taglib, CSS, Log4j, PostgreSQL
+      \item \emph{T\^ache:} maintenance de la couche pr\'esentation (front-office) bas\'e sur un gestionnaire de contenu java (Opencms)
+      \item \emph{Technologies:} Opencms, Spring, Tomcat, Apache, cvs, Ant, javascript, jsp, css, Log4j, Postgresql
   \end{item_cv}
 }
 
 \vspace{5mm}
 
-%% Sytadin %%
-\tllabelcventry{2006}{2008}{D\'ec. 2005 -- Sept. 2007}{D\'eveloppeur}{Neotilus}{}{}{SISER - Sytadin: R\'ealisation du site internet d'information routi\`ere \href{http://www.sytadin.fr}{www.sytadin.fr}.\\
+%% sytadin %%
+\cventry{d\'ec. 2005\\à sept. 2007}{D\'eveloppeur}{Neotilus}{}{}{SISER - Sytadin: r\'ealisation du site internet d'information routi\`ere \href{http://www.sytadin.fr}{www.sytadin.fr}.
+%\tllabelcventry{2006}{2008}{d\'ec. 2005 -- sept. 2007}{d\'eveloppeur}{neotilus}{}{}{siser - sytadin: r\'ealisation du site internet d'information routi\`ere \href{http://www.sytadin.fr}{www.sytadin.fr}.\\
   \begin{item_cv}          
       \item \emph{T\^ache:}
         \begin{itemize}
-            \item D\'eveloppement de la couche pr\'esentation (Front et Back-Office) reposant sur un gestionnaire de contenu Java (OpenCMS)
-            \item Installation et configuration du serveur Linux (Debian)
+            \item d\'eveloppement de la couche pr\'esentation (front et back-office) reposant sur un gestionnaire de contenu java (Opencms)
+            \item installation et configuration du serveur linux (debian)
         \end{itemize}
-    \item \emph{Technologies}  OpenCms, Spring, Tomcat, Apache, Eclipse, CVS, Ant, HTML, JavaScript, JSP, Taglib, CSS, Log4j, PostgreSQL, Junit, Debian
+    \item \emph{Technologies}  Opencms, Spring, Tomcat, Apache, cvs, ant, javascript, jsp, css, Log4j, Postgresql, Junit, Debian
   \end{item_cv}
 }
 
 \vspace{5mm}
 
-%% Stage %%
-\tllabelcventry{2005}{2006}{Juin 2005 -- D\'ec. 2005}{Stage}{France Telecom Recherche \& D\'eveloppement}{}{}{Algorithmique d'un calculateur d'itin\'eraires  appliqu\'e au guidage p\'edestre.\\
+%% stage %%
+\cventry{juin 2005\\à d\'ec. 2005}{Stage}{France Telecom Recherche \& D\'eveloppement (Orange Labs)}{}{}{Algorithmique d'un calculateur d'itin\'eraires  appliqu\'e au guidage p\'edestre.
+%\tllabelcventry{2005}{2006}{juin 2005 -- d\'ec. 2005}{stage}{france telecom recherche \& d\'eveloppement}{}{}{algorithmique d'un calculateur d'itin\'eraires  appliqu\'e au guidage p\'edestre.\\
     \begin{item_cv}
-        \item \emph{T\^ache:} D\'eveloppement de la base de donn\'ees et du calculateur:
-        \item \emph{Technologies:} Java, C, SVG, PostgreSQL/PostGIS, Linux (Debian), Batik, shapefile
+        \item \emph{T\^ache:} d\'eveloppement de la base de donn\'ees et du calculateur:
+        \item \emph{Technologies:} java, c, svg, Postgresql/Postgis, linux (Debian), batik, shapefile
     \end{item_cv}
 }
 
 
 \section{Dipl\^omes}
-\newcounter{vi} \setcounter{vi}{6} %Ecriture en chiffres romains
-\cvitem{2004-2005}{Master Paris \Roman{vi} fili\`ere Science de l'Information G\'eographique, anciennement DESS double comp\'etence Informatique Appliqu\'ee aux Sciences de laTerre}
-\cvitem{2003-2004}{DEA G\'eosciences Marines, sp\'ecialit\'e G\'eologie Structurale et S\'edimentaire (Brest)}
-\cvitem{2002-2003}{Maitr\^ise Sciences de la Terre et de l'Univers (Brest)}
+\newcounter{vi} \setcounter{vi}{6} %ecriture en chiffres romains
+\cvitem{2004-2005}{Master Paris \roman{vi} fili\`ere Science de l'Information G\'eographique, anciennement DESS double comp\'etence Informatique Appliqu\'ee aux Sciences de la Terre}
+\cvitem{2003-2004}{DEA g\'eosciences marines, sp\'ecialit\'e g\'eologie structurale et s\'edimentaire (Brest)}
+\cvitem{2002-2003}{Maitr\^ise sciences de la Terre et de l'univers (Brest)}
 \cvitem{2001-2002}{Licence Sciences de la Terre et de l'Univers (Brest)}
 
 
 \section{Langues vivantes}
-\cvitem{Anglais}{Lu, \'ecrit}
+\cvitem{anglais}{lu, \'ecrit}
 
 
 \section{Activit\'es}
-    \cvitem{Auto-h\'ebergement}{Serveur mail, owncloud, ...}
-    \cvitem{\href{http://www.openstreetmap.org}{OpenStreetMap}}{Contributeur sur la r\'egion de Lorient}
+    \cvitem{auto-h\'ebergement}{serveur mail, owncloud, ...}
+    \cvitem{\href{http://www.openstreetmap.org}{openstreetmap}}{contributeur sur la r\'egion de Lorient}
 
 \clearpage
 
-\include{motivation}
+%\include{motivation}
 %
-\end{document}
+\end{document}}

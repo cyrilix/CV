@@ -9,3 +9,8 @@
 /lettre.txt
 *.swp
 *.pdf
+tmp/
+dist/
+.project
+.texlipse
+

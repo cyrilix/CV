@@ -25,14 +25,15 @@
 \usepackage[firstyear=2005,lastyear=2015]{moderntimeline}
 
 % adjust the page margins
-\usepackage[scale=0.8]{geometry}
+\usepackage[scale=0.85]{geometry}
 \setlength{\hintscolumnwidth}{3cm} 
 \AtBeginDocument{\recomputelengths}
 
 
 % personal data
 \name{Cyrille}{Nofficial}
-\title{Architecte logiciel / Devops}                               % optional, remove / comment the line if not wanted
+\title{Lead Developer Java/JEE}                               % optional, remove
+% / comment the line if not wanted
 \address{31 rue Saint Amand}{75015 Paris}{}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{06 68 63 64 48}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 
@@ -56,7 +57,6 @@
 
 \AtBeginDocument{
     \hypersetup{pdfborder = 0 0 1,linkcolor=color1,colorlinks,urlcolor=color1}
-
 }
 
 \newenvironment{item_cv}{
@@ -71,12 +71,12 @@
 \section{Comp\'etences}
 \cvitem{OS}{Linux/UNIX (Debian, Centos, Solaris)}
 \cvitem{Langages}{Java, Python, Shell}
-\cvitem{Int\'egration continue}{Git, Gerrit, Jenkins/Hudson, Sonar, Nexus}
+\cvitem{Int\'egration continue}{Git, Gerrit, Jenkins/Hudson, Sonar, Nexus, Gitblit, Redmine}
 \cvitem{J2EE}{Tomcat, Glassfish, JEE, JAX-WS, JAX-RS, Spring, Logback}
-\cvitem{NoSQL}{MongoDB, Redis}
+\cvitem{NoSQL}{MongoDB, Redis, Elasticsearch}
 \cvitem{Base de donn\'ees}{SQL, PostgreSQL/PostGIS, Oracle, Mysql}
 \cvitem{Message Queuing}{AMQP, RabbitMQ}
-\cvitem{Outils de d\'eveloppement}{Maven, Ant, Git, SVN, CVS, Vim, Redmine}
+\cvitem{Outils de d\'eveloppement}{Maven, Ant, Git, Vim}
 \cvitem{Web}{Nginx, Lighttpd, Apache}
 \cvitem{Auto H\'ebergement}{postfix, dovecot, roundcube, owncloud}
 \cvitem{Autres}{openssl, VirtualBox, LVM, SoapUI, doxygen, graphviz, \LaTeX, ssh}
@@ -90,19 +90,32 @@
 \section{Exp\'erience Professionnelle}
 % Bouygues - Architecte logiciel
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\cventry{Nov. 2011\\à Aujourd'hui}{Architecte logiciel}{Bouygues Telecom}{}{}{Architecte logiciel au Middle Office FAI. Mon rôle consite à faire évoluer et maintenir à jour les webservices dédiés à l'acquisition et à la vie cliente sur l'offre internet fixe.\\
-%\tllabelcventry{2012}{0}{Nov 2011}{Architecte logiciel}{Bouygues Telecom}{}{}{Architecte logiciel au Middle Office FAI. Au sein d'une équipe de 30 personnes (20 développeurs), mon rôle consite à faire évoluer les systèmes techniques et mettre en place ou adapter les méthodes de travail.\\
+\cventry{Nov. 2011\\à Mars 2014}{Architecte logiciel transverse Middle Office / SAV Fixe}{Bouygues
+Telecom}{}{}{Mon rôle consite à faire évoluer et maintenir à jour les webservices dédiés à l'acquisition et à la vie cliente sur l'offre internet fixe.\\
+Depuis mars 2014, mon périmètre comprend également les applications du Service Après Vente Fixe. Ce périmètre inclut les
+technologies php.
 \begin{item_cv}
     \item \emph{T\^ache:}
             \begin{itemize}%
                 \item veille technologique
                 \item \og offshorisation \fg de l'usine de développement (externalisation partielle des développements en Russie (Novosibirsk))
-                \item harmonisation des développements sur les sytèmes techniques existants
-                \item mise en place et administration de l'usine logicielle: jenkins, sonar, gerrit \dots
-                \item intervention sur les problèmes de production (fuite mémoire, problèmes de performance, \dots)
+                \item harmonisation des développements sur les systèmes techniques existants
+                \item mise en place et administration de l'usine logicielle: jenkins, sonar, gerrit, gitblit, redmine \dots
+                \item automatisation des déploiements
+                \item intervention sur les problèmatiques de production complexes (fuites mémoires, problèmes de performance, \dots)
                 \item d\'eveloppement d'outils de monitoring temps r\'eel de la production
+                \item développement d'un framework applicatif commun à toutes les applications. Ce framework gère entre
+                autre:
+                \begin{itemize}
+                    \item la gestion des sessions via Mongodb ou Redis
+                    \item le paramètrage des applications
+                    \item l'authentification des webservices (logins, certificats)
+                    \item la génération de mesures d'exploitation 
+                \end{itemize} 
             \end{itemize}
-    \item \emph{Technologies:} AOP, glassfish 2 et 3, python, git, gerrit, Jenkins, Sonar, Maven, JAX-WS, REST, JSF2, Spring, Soapui, Junit, Easymock, Selenium, Mongodb, Redis, Oracle, Logback
+    \item \emph{Technologies:} AOP, glassfish 2 et 3, python, git, gerrit, gitblit, Jenkins, Sonar, Maven, JAX-WS, REST,
+    JSF2, Spring, Soapui, Junit, Easymock, Selenium, Mongodb, Redis, Oracle, Logback, Kibana, Logstash, Elasticsearch,
+    PHP, Phing, Composer
 \end{item_cv}
 }
 
@@ -192,7 +205,7 @@
 \cventry{juin 2005\\à d\'ec. 2005}{Stage}{France Telecom Recherche \& D\'eveloppement (Orange Labs)}{}{}{Algorithmique d'un calculateur d'itin\'eraires  appliqu\'e au guidage p\'edestre.
 %\tllabelcventry{2005}{2006}{juin 2005 -- d\'ec. 2005}{stage}{france telecom recherche \& d\'eveloppement}{}{}{algorithmique d'un calculateur d'itin\'eraires  appliqu\'e au guidage p\'edestre.\\
     \begin{item_cv}
-        \item \emph{T\^ache:} d\'eveloppement de la base de donn\'ees et du calculateur:
+        \item \emph{T\^ache:} d\'eveloppement de la base de donn\'ees et du calculateur
         \item \emph{Technologies:} java, c, svg, Postgresql/Postgis, linux (Debian), batik, shapefile
     \end{item_cv}
 }
@@ -202,7 +215,7 @@
 \newcounter{vi} \setcounter{vi}{6} %ecriture en chiffres romains
 \cvitem{2004-2005}{Master Paris \roman{vi} fili\`ere Science de l'Information G\'eographique, anciennement DESS double comp\'etence Informatique Appliqu\'ee aux Sciences de la Terre}
 \cvitem{2003-2004}{DEA g\'eosciences marines, sp\'ecialit\'e g\'eologie structurale et s\'edimentaire (Brest)}
-\cvitem{2002-2003}{Maitr\^ise sciences de la Terre et de l'univers (Brest)}
+\cvitem{2002-2003}{Maitr\^ise sciences de la Terre et de l'Univers (Brest)}
 \cvitem{2001-2002}{Licence Sciences de la Terre et de l'Univers (Brest)}
 
 
@@ -212,10 +225,11 @@
 
 \section{Activit\'es}
     \cvitem{auto-h\'ebergement}{serveur mail, owncloud, ...}
-    \cvitem{\href{http://www.openstreetmap.org}{openstreetmap}}{contributeur sur la r\'egion de Lorient}
+    \cvitem{\href{http://www.openstreetmap.org/\#map=13/47.7460/-3.4233}{OpenStreetMap}}{Contributeur sur la r\'egion
+    de Lorient}
 
 \clearpage
 
 %\include{motivation}
 %
-\end{document}}
+\end{document}

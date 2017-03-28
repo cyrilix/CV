@@ -32,7 +32,7 @@
 
 % personal data
 \name{Cyrille}{Nofficial}
-\title{Lead Developer Java/JEE}                               % optional, remove
+\title{Architecte logiciel / Devops}                               % optional, remove
 % / comment the line if not wanted
 \address{31 rue Saint Amand}{75015 Paris}{}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{06 68 63 64 48}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
@@ -69,18 +69,18 @@
 \makecvtitle
 
 \section{Comp\'etences}
-\cvitem{OS}{Linux/UNIX (Debian, Centos, Solaris)}
+\cvitem{OS}{Linux/UNIX (Debian/Ubuntu, Centos, Solaris)}
+\cvitem{Ops}{Ansible, Docker, Letsencrypt}
 \cvitem{Langages}{Java, Python, Shell}
-\cvitem{Int\'egration continue}{Git, Gerrit, Jenkins/Hudson, Sonar, Nexus, Gitblit, Redmine}
-\cvitem{J2EE}{Tomcat, Glassfish, JEE, JAX-WS, JAX-RS, Spring, Logback}
-\cvitem{NoSQL}{MongoDB, Redis, Elasticsearch}
-\cvitem{Base de donn\'ees}{SQL, PostgreSQL/PostGIS, Oracle, Mysql}
-\cvitem{Message Queuing}{AMQP, RabbitMQ}
-\cvitem{Outils de d\'eveloppement}{Maven, Ant, Git, Vim}
-\cvitem{Web}{Nginx, Lighttpd, Apache}
-\cvitem{Auto H\'ebergement}{postfix, dovecot, roundcube, owncloud}
-\cvitem{Autres}{openssl, VirtualBox, LVM, SoapUI, doxygen, graphviz, \LaTeX, ssh}
-
+\cvitem{Int\'egration continue}{Git, Gerrit, Gitlab, Jenkins, Sonar, Nexus}
+\cvitem{J2EE}{Tomcat, Glassfish, JEE, JAX-WS, JAX-RS, Spring, Guice Logback}
+\cvitem{NoSQL}{Cassandra, MongoDB, Redis, Elasticsearch}
+\cvitem{Base de donn\'ees}{SQL, PostgreSQL/PostGIS, Oracle}
+\cvitem{Message Queuing}{AMQP, RabbitMQ, MQTT}
+\cvitem{Outils de d\'eveloppement}{Gradle, Maven, Ant, Git, Vim, docker}
+\cvitem{Web}{Nginx, Apache}
+\cvitem{Auto H\'ebergement}{postfix, dovecot, roundcube, nextcloud}
+\cvitem{Autres}{spark, openssl, VirtualBox, LVM, \LaTeX, ssh, iptables, Influxdb/Telegraf} 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -88,32 +88,31 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Exp\'erience Professionnelle}
+% Target2sell
+\cventry{Déc. 2014\\à aujourd'hui}{Devops}{Target2sell}{}{}{Développement et exploitation d'un moteur de recommendations pour le e-commerce.
+\begin{item_cv}
+    \item \emph{Dev:} conception et développement des nouvelles fonctionnalités
+    \item \emph{Ops:} mise en place, administration et monitoring de l'infrastucture et du produit
+    \item \emph{Technologies:} Ansible, Nginx, Docker, Gradle, Datastax Cassandra/Spark, Redis, Mongodb, Rabbitmq, Tomcat, Guice, FluentHttp, Graphite, Grafana, rsyslog
+\end{item_cv}
+}
+
+\vspace{5mm}
+
 % Bouygues - Architecte logiciel
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\cventry{Nov. 2011\\à aujourd'hui}{Architecte logiciel transverse Middle Office / SAV Fixe}{Bouygues
+\cventry{Nov. 2011\\à Déc. 2014}{Architecte logiciel transverse Middle Office / SAV Fixe}{Bouygues
 Telecom}{}{}{Mon rôle consiste à faire évoluer et maintenir à jour les webservices dédiés à l'acquisition et à la vie cliente sur l'offre internet fixe.\\
-Depuis mars 2014, mon périmètre comprend également les applications du Service Après Vente Fixe. Ce périmètre inclut les
+De mars 2014 à novembre 2014, le périmètre comprend également les applications du Service Après Vente Fixe. Ce périmètre inclut les
 technologies php.
 \begin{item_cv}
     \item \emph{T\^ache:}
             \begin{itemize}%
                 \item veille technologique
                 \item \og offshorisation \fg de l'usine de développement (externalisation partielle des développements en Russie (Novosibirsk))
-                \item harmonisation des développements sur les systèmes techniques existants
                 \item mise en place et administration de l'usine logicielle: jenkins, sonar, gerrit, gitblit, redmine 
                 \item automatisation des déploiements
-                \item intervention sur les problématiques de production complexes (fuites mémoires, problèmes de performance)
-                \item mis en place d'une ferme Selenium
                 \item d\'eveloppement d'outils de monitoring temps r\'eel de la production
-                \item m\'ethodologie Scrum
-                \item développement d'un framework applicatif commun à toutes les applications. Ce framework gère entre
-                autre:
-                \begin{itemize}
-                    \item la gestion des sessions via Mongodb ou Redis
-                    \item le paramétrage des applications
-                    \item l'authentification des webservices (logins, certificats)
-                    \item la génération de mesures d'exploitation 
-                \end{itemize} 
             \end{itemize}
     \item \emph{Technologies:} AOP, glassfish 2 et 3, python, git, gerrit, gitblit, Jenkins, Sonar, Maven, JAX-WS, REST,
     JSF2, Spring, Soapui, Junit, Easymock, Selenium, Mongodb, Redis, Oracle, Logback, Kibana, Logstash, Elasticsearch,
@@ -217,7 +216,7 @@ technologies php.
 \newcounter{vi} \setcounter{vi}{6} %ecriture en chiffres romains
 \cvitem{2004-2005}{Master Paris \roman{vi} fili\`ere Science de l'Information G\'eographique, anciennement DESS double comp\'etence Informatique Appliqu\'ee aux Sciences de la Terre}
 \cvitem{2003-2004}{DEA g\'eosciences marines, sp\'ecialit\'e g\'eologie structurale et s\'edimentaire (Brest)}
-\cvitem{2002-2003}{Maitr\^ise sciences de la Terre et de l'Univers (Brest)}
+\cvitem{2002-2003}{Maitr\^ise Sciences de la Terre et de l'Univers (Brest)}
 \cvitem{2001-2002}{Licence Sciences de la Terre et de l'Univers (Brest)}
 
 
@@ -226,9 +225,8 @@ technologies php.
 
 
 \section{Activit\'es}
-    \cvitem{auto-h\'ebergement}{serveur mail, owncloud, ...}
-    \cvitem{OpenStreetMap}{Contributeur sur la r\'egion de \href{http://www.openstreetmap.org/\#map=13/47.7460/-3.4233}{Lorient}}
-
+    \cvitem{auto-h\'ebergement}{serveur mail, dnssec, nextcloud, ...}
+    \cvitem{Domotique}{IOT, Arduino, RaspberryPi, MQTT}
 \clearpage
 
 %\include{motivation}
